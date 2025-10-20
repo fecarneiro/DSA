@@ -26,6 +26,14 @@ class LinkedList {
     return this;
   }
 
+  prepend(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      newNode.next = this.head;
+  }
+
   printList() {
     let current = this.head;
     let result = '';

@@ -40,7 +40,8 @@ class LinkedList {
 const linkedList = new LinkedList();
 linkedList.append(10).append(20).append(30).printList();
 
-/*
+/* Notes
   Números, Strings são passados como parâmetros (cópia)
   Objetos, Arrays são passados como referência (ponteiro)
+
 */

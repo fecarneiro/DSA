@@ -32,13 +32,17 @@ class LinkedList {
       this.head = newNode;
     } else {
       newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
   }
 
   printList() {
     let current = this.head;
-    let result = '';
+    let result = 'HEAD -> ';
     while (current) {
-      result += current.value + ' -> ';
+      result += '[' + current.value + ']' + ' -> ';
       current = current.next;
     }
     console.log(result + 'null');
@@ -46,10 +50,10 @@ class LinkedList {
 }
 
 const linkedList = new LinkedList();
-linkedList.append(10).append(20).append(30).printList();
+linkedList.append(10).append(20).prepend(30).printList();
 
 /* Notes
   Números, Strings são passados como parâmetros (cópia)
   Objetos, Arrays são passados como referência (ponteiro)
-
+  Head: ponteiro para o primeiro, e não um nó em si
 */

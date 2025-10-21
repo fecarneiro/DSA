@@ -15,7 +15,7 @@ function manipulateArr() {
   numbs;
 }
 manipulateArr();
-
+//
 function verification() {
   const isEven = (x) => x % 2 === 0;
   let items = [2, 4, 6, 8, 10];
@@ -25,7 +25,7 @@ function verification() {
   verifySome;
 }
 verification();
-
+//
 function iteration() {
   let lista = [2, 4, 6, 8, 10];
   const mult = (x) => {
@@ -42,7 +42,7 @@ function iteration() {
   lista.forEach((element) => console.log(element * 3.333));
 }
 iteration();
-
+//
 function mapping() {
   let choices = [222, 444, 666, 555];
   const isEven = (x) => x % 2 === 0;
@@ -63,6 +63,53 @@ function mapping() {
   console.log(users);
 }
 mapping();
+//
+function ordering() {
+  let nums = [3, 312, 52, 3, 421, 43];
+  nums.sort((a, b) => a - b);
+  nums;
 
-let name = ['Felipe', 'Gabi', 'Oliver', 'Olavo', 'Angela'];
-console.log(name.includes('Felipe'));
+  //
+
+  let nuu = [3, 312, 52, 3, 421, 43];
+  function compare(a, b) {
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  }
+  nuu.sort(compare);
+  nuu;
+
+  //
+
+  const family = [
+    { name: 'felipe', age: 31 },
+    { name: 'angela', age: 60 },
+    { name: 'olavo', age: 2 },
+  ];
+
+  function familyAge(a, b) {
+    if (a.age < b.age) {
+      return -1;
+    }
+    if (a.age > b.age) {
+      return 1;
+    }
+    return 0;
+  }
+
+  family.sort(familyAge);
+  family;
+}
+ordering();
+//
+function index() {
+  const myNb = [2, 3, 5, 6, 7];
+
+  console.log(myNb.indexOf(6));
+}
+index();

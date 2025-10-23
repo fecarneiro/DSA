@@ -1,0 +1,1 @@
+linkedList.addHead(4);

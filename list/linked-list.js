@@ -17,17 +17,29 @@ class LinkedList {
     if (this.head == null) {
       this.head = newNode;
     } else {
-      let current;
-      while (this.next !== null) {
-        current = this.next;
+      let current = this.head;
+      while (current.next !== null) {
+        current = current.next;
       }
-      current = newNode;
+      current.next = newNode;
     }
+  }
+  print() {
+    let current = this.head;
+    let result = 'Head -> ';
+    while (current !== null) {
+      result += `${current.value} -> `;
+      current = current.next;
+    }
+    result += 'null';
+    console.log(result);
   }
 }
 
-const linkedList = new LinkedList();
-linkedList.append(3);
-linkedList.append(4);
-linkedList.append(5);
-console.log(JSON.stringify(linkedList, null, 2));
+const list = new LinkedList();
+list.append(3);
+list.append(4);
+list.append(5);
+list.append(5);
+list.append(5);
+list.print();

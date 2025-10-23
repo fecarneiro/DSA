@@ -1,1 +1,1 @@
-linkedList.addHead(4);
+list.append(5);

@@ -21,9 +21,6 @@ for (let i = 0; i < arr.length; i++) {
 }
 // console.log(count);
 
-// Passo 1: Use um loop para encontrar qual é o MAIOR número
-// Passo 2: Descubra em qual POSIÇÃO ele está
-// Passo 3: Troque ele com o primeiro elemento (posição 0)
 
 arr = [5, 2, 8, 1];
 let higher = arr[0];
@@ -33,14 +30,20 @@ for (let i = 0; i < arr.length; i++) {
   current = arr[i];
   if (current > higher) {
     higher = current;
-    position = `index ${i} (posição ${i + 1})`;
+    position = i;
   }
-}
-
-if () {
-
 }
 
 console.log(higher);
 console.log(current);
 console.log(position);
+
+
+if (higher != 0) {
+  let temp = arr[0]
+  arr[0] = higher;
+  arr[position] = temp
+}
+console.log(arr)
+
+

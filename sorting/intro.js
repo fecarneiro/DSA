@@ -21,7 +21,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 // console.log(count);
 
-
+/////////////////////////
 arr = [5, 2, 8, 1];
 let higher = arr[0];
 let current = '';
@@ -34,16 +34,24 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(higher);
-console.log(current);
-console.log(position);
-
+// console.log(higher);
+// console.log(current);
+// console.log(position);
 
 if (higher != 0) {
-  let temp = arr[0]
+  let temp = arr[0];
   arr[0] = higher;
-  arr[position] = temp
+  arr[position] = temp;
 }
-console.log(arr)
+// console.log(arr)
 
+arr = [7, 3, 9, 2];
 
+for (let i = 0; i < arr.length - 1; i++) {
+  if (arr[i] > arr[i + 1]) {
+    let current = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + i] = current;
+  }
+}
+console.log(arr);

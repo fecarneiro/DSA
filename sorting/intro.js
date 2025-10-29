@@ -1,32 +1,14 @@
-//https://claude.ai/chat/2ea26cf0-68a6-442f-87b2-93e3afa093ba
-let arr = [5, 2, 8, 1];
-let higher = arr[0];
-let current = '';
-let position = '';
-for (let i = 0; i < arr.length; i++) {
-  current = arr[i];
-  if (current > higher) {
-    higher = current;
-    position = i;
-  }
-}
+let arr = [7, 3, 9, 2];
 
-if (higher != 0) {
-  let temp = arr[0];
-  arr[0] = higher;
-  arr[position] = temp;
-}
-//2
-
-arr = [7, 3, 9, 2];
-let cur = '';
-let target = '';
-
+let counter = 0;
 for (let i = 0; i < arr.length - 1; i++) {
+  let temp = arr[i];
+
   if (arr[i] > arr[i + 1]) {
-    cur = arr[i];
-    arr[i] = arr[i + 1]; // [0]7 = [0]3
-    target = cur;
+    arr[i] = arr[i + 1];
+    arr[i + 1] = temp;
+    counter++;
   }
-  console.log(arr);
 }
+console.log(arr);
+console.log(counter);

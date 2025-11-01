@@ -5,14 +5,13 @@ let endIndex = arr.length - 1;
 let middleIndex = (endIndex - startIndex) / 2;
 
 function binarySearch(targetValue, startIndex, endIndex, middleIndex) {
-  while (startIndex <= endIndex) {
+  while (endIndex <= startIndex) {
     if (targetValue == arr[middleIndex]) {
       console.log(`target value at array index ${middleIndex}`);
-    }
-    if (targetValue > arr[middleIndex]) {
+    } else if (targetValue > arr[middleIndex]) {
       startIndex = middleIndex;
       middleIndex = startIndex + (endIndex - startIndex) / 2;
-    }
+    } else ////////
   }
   console.log(`matched value found at array index ${middleIndex}`);
   return;

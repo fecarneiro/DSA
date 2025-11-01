@@ -1,4 +1,9 @@
-#
+binary search
+sequential search
+linear search
+
+insetion sort
+selection sort
 
 ## Passagem por referência:
 

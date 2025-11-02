@@ -1,35 +1,24 @@
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const targetValue = 9;
-let startIndex = 0;
-let endIndex = arr.length - 1;
-let middleIndex = (endIndex - startIndex) / 2;
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
 
-function binarySearch(targetValue, startIndex, endIndex, middleIndex) {
-  while (endIndex <= startIndex) {
-    if (targetValue == arr[middleIndex]) {
-      console.log(`target value at array index ${middleIndex}`);
-    } else if (targetValue > arr[middleIndex]) {
-      startIndex = middleIndex;
-      middleIndex = startIndex + (endIndex - startIndex) / 2;
-    } else ////////
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
   }
-  console.log(`matched value found at array index ${middleIndex}`);
-  return;
+  return 'NOT FOUND';
 }
 
-binarySearch(startIndex, endIndex, middleIndex, targetValue);
-// function binarySearch(targetValue, startIndex, endIndex, middleIndex) {
-//   while (targetValue !== arr[middleIndex]) {
-//     if (targetValue > arr[middleIndex]) {
-//       startIndex = middleIndex;
-//       middleIndex = startIndex + (endIndex - startIndex) / 2;
-//       if (endIndex - middleIndex == 1) {
-//         targetValue = endIndex;
-//       }
-//     }
-//   }
-//   console.log(`matched value found at array index ${middleIndex}`);
-//   return;
-// }
+const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const target1 = 9;
+const target2 = 10;
 
-// binarySearch(startIndex, endIndex, middleIndex, targetValue);
+console.log(`Index of ${target1}: ${binarySearch(sortedArray, target1)}`);
+console.log(`Index of ${target2}: ${binarySearch(sortedArray, target2)}`);

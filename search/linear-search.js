@@ -1,3 +1,5 @@
+//O(n)
+
 const arr = [63, 4, 25, 36, 7, 68, 79];
 const target = 7;
 const size = arr.length;

@@ -4,7 +4,7 @@ Loop interno roda N vezes em cada passada
 Total: N × N = N² operações
 Pior caso -> O(n²)
 */
-let bubbleSort = (arr) => {
+function bubbleSort(arr) {
   let n = arr.length;
   let swapped;
 
@@ -22,6 +22,6 @@ let bubbleSort = (arr) => {
     }
   } while (swapped);
   return arr;
-};
+}
 let arr = [7, 3, 9, 2];
 console.log(bubbleSort(arr));
